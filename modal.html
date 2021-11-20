@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>shiptt</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/request-a-qoute.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Schedule a pickup</h4>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="fname">Shipper's First Name *</label>
+                    <div class="form-holder">
+                        <input type="text" class="form-control" id="fname">
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="lname">Shipper's Last Name *</label>
+                    <div class="form-holder">
+                        <input type="text" class="form-control" id="lname">
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                  <label for="s_business">Shipper's Business *</label>
+                  <div class="form-holder">
+                      <input type="text" class="form-control" id="s_business" required>
+                  </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                  <label for="s_phone">Shipper's Phone *</label>
+                  <div class="form-holder">
+                      <input type="number" class="form-control" id="s_phone" required>
+                  </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label for="s_email">Shipper's Email Address *</label>
+                    <div class="form-holder">
+                        <input type="email" class="form-control" id="s_email" required>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label for="s_add1">Pickup address 1 *</label>
+                    <div class="form-holder">
+                        <input type="text" class="form-control" id="s_add1" required>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                  <label for="s_add2">Pickup Address 2 *</label>
+                  <div class="form-holder">
+                      <input type="text" class="form-control" id="s_add2" required>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="s_city">city *</label>
+                  <div class="form-holder">
+                      <input type="text" class="form-control" id="s_city" required>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="s_state">State/Province *</label>
+                  <div class="form-holder">
+                      <input type="text" class="form-control" id="s_state" required>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="s_zip">Zip/Postal Code *</label>
+                  <div class="form-holder">
+                      <input type="text" class="form-control" id="s_zip" required>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="s_country">Country *</label>
+                  <div class="form-holder">
+                      <input type="text" class="form-control" id="s_country" required>
+                  </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                  <label for="pickup_date">Pickup Date *</label>
+                  <div class="form-holder">
+                      <input type="date" class="form-control" id="pickup_date" required>
+                  </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                  <label for="pickup_time">Pickup Time *</label>
+                  <div class="form-holder">
+                      <select class="form-control" id="pickup_time" required>
+                        <option value="Brooklyn: 10-2pm">Brooklyn: 10-2pm</option>
+                        <option value="Brooklyn: 3-6pm">Brooklyn: 3-6pm</option>
+                        <option value="Queens: 11-4pm">Queens: 11-4pm</option>
+                        <option value="Bronx: 12-4pm">Bronx: 12-4pm</option>
+                        <option value="SI/NJ/PA: 12-4pm">SI/NJ/PA: 12-4pm</option>
+                        <option value="Nassau &amp; Suffolk County: 12-4pm">Nassau &amp; Suffolk County: 12-4pm</option>
+                        <option value="Yonkers/Mt Vernon/Upstate/CT: 12-4pm">Yonkers/Mt Vernon/Upstate/CT: 12-4pm</option>
+                      </select>
+                  </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label for="commodity">Commodity (Items/Package contents) *</label>
+                    <div class="form-holder">
+                      <textarea class="form-control" id="commodity" rows="5" required></textarea>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                  <label for="destination_port">Destination Port *</label>
+                  <div class="form-holder">
+                      <input type="text" class="form-control" id="destination_port" required>
+                  </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                  <label for="c_name">Consignee Name *</label>
+                  <div class="form-holder">
+                      <input type="text" class="form-control" id="c_name" required>
+                  </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                  <label for="c_business">Consignee Business</label>
+                  <div class="form-holder">
+                      <input type="text" class="form-control" id="c_business">
+                  </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                  <label for="c_add1">Consignee Address 1 *</label>
+                  <div class="form-holder">
+                      <input type="text" class="form-control" id="c_add1" required>
+                  </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                  <label for="c_add2">Consignee Address 2 *</label>
+                  <div class="form-holder">
+                      <input type="text" class="form-control" id="c_add2" required>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="c_city">City *</label>
+                  <div class="form-holder">
+                      <input type="text" class="form-control" id="c_city" required>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="c_state">State/Province *</label>
+                  <div class="form-holder">
+                      <input type="text" class="form-control" id="c_state" required>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="c_zip">Zip/Postal Code *</label>
+                  <div class="form-holder">
+                      <input type="text" class="form-control" id="c_zip" required>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="c_country">Country *</label>
+                  <div class="form-holder">
+                      <input type="text" class="form-control" id="c_country" required>
+                  </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                  <label for="c_phone">Consignee Phone *</label>
+                  <div class="form-holder">
+                      <input type="text" class="form-control" id="c_phone" required>
+                  </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                  <label>Additional Service</label>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" value="Door-to-Door" id="Door-to-Door"> Door-to-Door
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" value="Insurance" id="Insurance"> Insurance ($50 for up to $500)
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" value="Crating" id="Crating"> Crating
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" value="Wrapping" id="Wrapping"> Wrapping
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                  <label for="driver_instruction">Driver Instructions</label>
+                  <div class="form-holder">
+                      <textarea class="form-control" id="driver_instruction" rows="5"></textarea>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+</body>
+</html>

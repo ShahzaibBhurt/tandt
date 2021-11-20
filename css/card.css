@@ -1,0 +1,76 @@
+.card{
+    box-shadow: -18px 19px 31px rgb(0 0 0 / 20%);
+    margin-bottom: 30px;
+    border-radius: 6px;
+      box-shadow: 0 1px 4px rgb(0 0 0 / 23%);
+      background-color: #FFFFFF;
+      margin-bottom: 20px;
+      position: relative;
+      max-width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  .card[data-color="black"] {
+    background: #787878;
+    background: -moz-radial-gradient(center, ellipse cover, #343434 0%, #787878 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #343434), color-stop(100%, #787878));
+    background: -webkit-radial-gradient(center, ellipse cover, #343434 0%, #787878 100%);
+    background: -o-radial-gradient(center, ellipse cover, #343434 0%, #787878 100%);
+    background: -ms-radial-gradient(center, ellipse cover, #343434 0%, #787878 100%);
+    background: radial-gradient(ellipse at center, #343434 0%, #787878 100%);
+    background-size: 250% 250%;
+  }
+  .card[data-background="image"] .title, .card[data-background="image"] .stats, .card[data-background="image"] .category, .card[data-background="image"] .description, .card[data-background="image"] .content, .card[data-background="image"] .footer, .card[data-background="image"] small, .card[data-background="image"] a, .card[data-background="color"] .title, .card[data-background="color"] .stats, .card[data-background="color"] .category, .card[data-background="color"] .description, .card[data-background="color"] .content, .card[data-background="color"] .footer, .card[data-background="color"] small, .card[data-background="color"] a {
+    color: #FFFFFF;
+  }
+  .card.card-just-text .content {
+    padding: 50px 65px;
+    text-align: center;
+  }
+  .card .title, .card .stats, .card .category, .card .description, .card .social-line, .card .actions, .card .content, .card .footer, .card small, .card a {
+    position: relative;
+    z-index: 3;
+  }
+  .card[data-background="image"] .title, .card[data-background="color"] .title {
+    font-weight: bold;
+  }
+  .card .content .title {
+    margin: 10px 0 20px 0;
+  }
+  .card h4, .card .h4 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .card h1, .card .h1, .card h2, .card .h2, .card h3, .card .h3, .card h4, .card .h4, .card h5, .card .h5, .card h6, .card .h6, .card p, .card .navbar, .card .brand, .card .btn, .card a, .card .td-name, .card td {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Playfair Display","Raleway","Helvetica Neue",Arial,sans-serif;
+  }
+  .card .description {
+    font-size: 16px;
+    color: #9A9A9A;
+  }
+  .card p {
+    font-size: 16px;
+    line-height: 1.3;
+    font-family: "Raleway","Helvetica","Arial", sans-serif;
+  }
+  .card.card-just-text .content {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  .card.card-with-border:after {
+    position: absolute;
+    display: block;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    content: "";
+    top: 5px;
+    left: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    border-radius: 5px;
+  }
+  .card[data-background="image"].card-with-border:after, .card[data-background="color"].card-with-border:after {
+    border: 1px solid rgba(255, 255, 255, 0.45);
+  }
